@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Question 4</h1>
+    <h1>Roll the Dice </h1>
+    <p id="diceResult">Click the button to roll the dice!</p>
+    <button onclick="rollDice()">Roll Dice</button>
+
+
+
+    <h1>Question 5</h1>
+    <h1>Heads or Tails</h1>
+    <p id="coinResult">Click the button to toss the coin!</p>
+    <button onclick="coinToss()">Toss Coin</button>
+    <script>
+                document.write("<h1>Question 1</h1>")
+
+        var ask=prompt("Enter positve integer",3.45214)
+        document.write("Number :",ask,"<br>")
+        var roundScore = Math.round(ask)
+        document.write("Roundoff value : ",roundScore ,"<br>")
+        var floorScore = Math.floor(ask)
+        document.write("Floor value : " ,floorScore ,"<br>")
+        var ceilScore = Math.ceil(ask)
+        document.write("Ceil value : ",
+        ceilScore ,"<br>")
+
+        document.write("<h1>Question 2</h1>")
+
+        var ask2=prompt("Enter negetive floating number",-2.673)
+        document.write("Number :",ask2,"<br>")
+        var roundScore2 = Math.round(ask2)
+        document.write("Roundoff value : ",roundScore2 ,"<br>")
+        var floorScore2 = Math.floor(ask2)
+        document.write("Floor value : " ,floorScore2 ,"<br>")
+        var ceilScore2 = Math.ceil(ask2)
+        document.write("Ceil value : ",
+        ceilScore2 ,"<br>")
+
+        document.write("<h1>Question 3</h1>")
+
+        var ask3=prompt("Enter number to check either it is absolute or not",-4)
+        var absolute = Math.abs(ask3)
+        document.write("The absolute Number of ", ask3, " is ", absolute)
+
+        console.log("Question 4");
+        function rollDice() {
+            var diceValue = Math.floor(Math.random() * 6) +1;
+            document.getElementById("diceResult").innerText = "You rolled a " + diceValue + "!";
+        }
+        
+        console.log("Question 5");
+
+        function coinToss() {
+            var coinValue;
+            if (Math.random() < 0.5) {
+                    coinValue = "Heads";
+                }
+                else{
+                    coinValue = "Tails";
+                }            
+                document.getElementById("coinResult").innerText = "You got a " + coinValue + "!";
+
+        }
+
+                document.write("<h1>Question 6</h1>")
+
+
+        var randonValue = Math.floor(Math.random()*100)+1
+        document.write(" <br> RandomNumber 1 - 100 is : ",randonValue)
+
+                document.write("<h1>Question 7</h1>")
+                var weightInput =prompt("Enter your weight")
+                var weight = parseFloat(weightInput)
+                document.write(weight)
+
+                document.write("<h1>Question 8</h1>")
+                var secretInput =prompt("Enter number 1 - 10")
+                var secretValue = Math.floor(Math.random()*10)+1
+              if (secretInput === secretValue){
+                document.write( "Congratulations! You guessed the secret number.")
+              }
+              else{document.write("Try Again")}
+        
+
+    </script>
+</body>
+</html>
